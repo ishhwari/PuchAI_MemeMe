@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: white(252, 252, 252);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+.logo {
+    width: 300px; /* Outer circle size */
+    height: 300px;
+    margin: 0 auto 1rem;
+    background: white;
+    border: 6px solid #8b5a96;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s ease-in-out infinite alternate;
+    /*position: relative; */
+    overflow: hidden; /* Keeps image inside the circle */
+}
+
+.logo-img {
+    width: 90%; /* Reduce size inside circle */
+    height: 90%;
+    object-fit: cover;
+    border-radius: 50%; 
+}
+
+
+.company-name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #be3865;
+    text-shadow: none;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    font-family: 'Pacifico', cursive;
+}
+
+.slogan {
+    font-size: 1.3rem;
+    color: #a76086;
+    font-style: bold;
+    text-shadow: none;
+    margin-top: 1rem;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.content-placeholder {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.bottom-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    pointer-events: none;
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    pointer-events: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.faq-btn {
+    background: none; /* Remove gradient background */
+    padding: 0;
+    border-radius: 50%;
+    box-shadow: none;;
+}
+
+.faq-btn:hover {
+    transform: scale(1.05);
+    background: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-img {
+    width: 90px; /* Adjust size */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.meme-btn {
+    background: linear-gradient(30deg, #ff69b4, #e91e63);
+    color: white;
+    margin-right: 0;
+    font-size: 1.5rem; /* bigger font size */
+    text-transform: none; /* keep normal case */
+    padding: 10px 20px; /* bigger padding for a larger button */;
+    
+}
+
+.meme-btn:hover {
+    background: linear-gradient(45deg, #e91e63, #c2185b);
+}
+
+@media (max-width: 768px) {
+    .company-name {
+        font-size: 1.8rem;
+    }
+    
+    .logo {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .bottom-buttons {
+        padding: 1rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        border-radius: 10px;
+    }
+}
